@@ -8,7 +8,7 @@
             Padding="200,0"
             Spacing="15">
             <Image
-                Source="cs.png"
+                Source="counterstrike.png"
                 HeightRequest="300"
                 Aspect="AspectFit"
                 SemanticProperties.Description="counter strike 2 logo" />
