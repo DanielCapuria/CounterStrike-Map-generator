@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CSMapAPP.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="200,0"
+            Spacing="15">
+            <Image
+                Source="cs.png"
+                HeightRequest="300"
+                Aspect="AspectFit"
+                SemanticProperties.Description="counter strike 2 logo" />
+
+            <Label
+                Text="Welcome to the Counter Strike map and team generator!"
+                TextColor="Orange"
+                FontFamily="Impact"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level2" />
+
+            <Label
+                Text="Lets get Started!"
+                TextColor="Orange"
+                FontFamily="Impact"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="lets get started" />
+            
+            <StackLayout Padding="30">
+                <Label Text="Pick between Heads or Tails" FontSize="28" HorizontalOptions="Center" FontFamily="Impact" />
+
+                <Entry x:Name="UserInputEntry" Placeholder="Type heads or tails here" />
+
+                <Button Text="Submit" 
+                        TextColor="DarkSlateGrey" 
+                        BackgroundColor="Orange" 
+                        Clicked="HeadsOrTailsClick" />
+
+                <Label x:Name="ResponseLabel"
+                       FontFamily="Arial Black" 
+                       TextColor="DarkSlateGrey"
+                       FontSize="20"
+                       HorizontalOptions="Center" />
+            </StackLayout>
+
+            <StackLayout Padding="30">
+                <Label Text="Click to generate a map between Ancient, Anubis, Inferno, Mirage, Nuke, or Vertigo." 
+                       FontSize="24" 
+                       HorizontalOptions="Center" 
+
+                       FontFamily="Impact"/>
+
+                <Button Text="Generate Random Map" TextColor="DarkSlateGrey" BackgroundColor="Orange" Clicked="OnCounterClicked"/>
+                <Label x:Name="RandomItemLabel" FontSize="24" 
+                       HorizontalOptions="Center"
+                       TextColor="DarkSlateGrey"
+                       FontFamily="Arial Black"
+                       VerticalOptions="Center"/>
+            </StackLayout>
+            <Label Text="Good luck and have fun!"
+                   TextColor="Orange"
+                    FontFamily="Impact"
+                     Style="{StaticResource SubHeadline}"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="lets get started"/>
+
+        </VerticalStackLayout>
+        
+    </ScrollView>
+
+</ContentPage>
