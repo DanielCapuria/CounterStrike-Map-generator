@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - CsMapGenerator
+name: Build and deploy ASP.Net Core app to Azure Web App - CSMapGenerator
 
 on:
   push:
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_297082D79D984E4C9EA22A009313DA21 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_90CC49F9823E4C4AACA4F23D39D47779 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_D4451E95C1EF4F23B56DFFFCDF2EB2C1 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F106BDCD12494108B1C6BF4D79C62C8B }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_202646F208D349F7A534526DDBBEB012 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7DCC7FDD990E43B9BC00056E83A73B0E }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'CsMapGenerator'
+          app-name: 'CSMapGenerator'
           slot-name: 'Production'
           package: .
           
